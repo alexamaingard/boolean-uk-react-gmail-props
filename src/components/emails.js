@@ -73,13 +73,13 @@ const Emails = () => {
                     />
                 </div>
                 <form className="search" 
-                    onChange={handleChange} 
                     onSubmit={handleSubmit}>
                         <input 
                             className="search-bar"
                             id = "searchBar" 
                             placeholder="Search mail"
                             type="text"
+                            onChange={handleChange}
                         />
                 </form>
             </header>
