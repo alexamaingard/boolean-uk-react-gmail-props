@@ -34,7 +34,7 @@ const Emails = () => {
         setEmails(updatedEmails);
     }
 
-    const searchEmailsByTitle = event => {
+    const handleChange = event => {
         event.preventDefault();
         const updatedEmails = emails =>
             emails.filter(email =>
@@ -44,6 +44,10 @@ const Emails = () => {
             return setEmails(initialEmails);
         }
         setEmails(updatedEmails);
+    }
+    
+    const handleSubmit = event => {
+        handleChange(event);
     }
 
     let filteredEmails = emails;
@@ -68,7 +72,7 @@ const Emails = () => {
                         alt="gmail logo"
                     />
                 </div>
-                <form className="search" onChange={event => searchEmailsByTitle(event)} onSubmit={event => searchEmailsByTitle(event)}>
+                <form className="search" onChange={handleChange} onSubmit={handleSubmit}>
                         <input 
                             className="search-bar"
                             id = "searchBar" 
