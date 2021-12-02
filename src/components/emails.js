@@ -72,7 +72,9 @@ const Emails = () => {
                         alt="gmail logo"
                     />
                 </div>
-                <form className="search" onChange={handleChange} onSubmit={handleSubmit}>
+                <form className="search" 
+                    onChange={handleChange} 
+                    onSubmit={handleSubmit}>
                         <input 
                             className="search-bar"
                             id = "searchBar" 
